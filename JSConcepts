@@ -1,0 +1,83 @@
+//var, obj, boolean
+msge = 3 * '2'
+let news = 1+ 'hi'
+var movie = false
+movie = {name :'bhuvi'}
+console.log(msge, typeof msge)
+console.log(news, typeof news)
+console.log(movie, typeof movie)
+//array
+var myArray = []
+myArray[4] = "hello"
+console.log(myArray);
+
+//console.log(meat)
+//console.log(met);
+//var meat = 2
+//const met = 3
+function bhuv(name) {
+    return "hee," + name; }
+console.log(bhuv('sur'))
+//objects
+// const vikram = {
+//     name : 'Booi',
+//     bhuva(name) {
+//         return "hee," + name;
+//     }
+// }
+//  console.log(vikram.bhuva()) 
+ //output is undefined
+
+const vikram = {
+    name : 'Booi',
+    bhuva(name) {
+        return "hee," + this.name;
+    }
+}
+ console.log(vikram.bhuva()) 
+
+// arrow fn :
+// const vikram = {
+//     name : 'Booi',
+//     bhuva :() => {
+//         return "hee," + this.name;
+//     }
+// }
+// console.log(vikram.bhuva())
+// this keyword does not refer to an object when it used inside arrow fn
+
+// console.log('start')
+// setTimeout(() => {
+//     console.log('middle')
+// },0);
+
+// Promise.resolve("H").then((res)=>console.log(res))
+// console.log("sdfsd")
+
+class person {
+    constructor(name,age) {
+        this.name = name;
+        this.age = age
+    }
+    
+    greet(){
+        console.log(this.name)
+    }
+}
+const person1 = new person("Piyush",25)
+console.log(person1)
+//person1.greet()
+const {name} = person1;
+console.log(`Helloe ${name}`)
+
+
+OUTPUT:6 number
+1hi string
+{ name: 'bhuvi' } object
+[ <4 empty items>, 'hello' ]
+hee,sur
+hee,Booi
+person { name: 'Piyush', age: 25 }
+Helloe Piyush
+
+=== Code Execution Successful ===
